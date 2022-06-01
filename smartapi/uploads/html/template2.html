@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML Template 2</title>
+        <link rel="stylesheet" href="http://localhost:8881/public/style2.css" />
+        <!-- ADD CSS AUTOMATICALLY -->
+    </head>
+  <body>
+    <section class="container">
+      <section id="section-header">
+        <div class="header-left">
+          <img src="http://localhost:8881/public/logo.png" width="100px" class="logo" alt="logo {{schoolName}}" />
+        </div>
+        <div class="header-right">
+          <div class="header-right-top">
+            <div class="school-name">
+              {{schoolName}}
+            </div>
+            <div class="school-info">
+              <p>{{schoolExtraInfo}}</p>
+              <p>{{schoolAddress}}</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="section-title">
+        <div class="title-top">
+          {{resultTitle}}
+        </div>
+        <div class="title-term-name">
+          {{termName}}
+        </div>
+        <div class="title-more-info">
+          <span></span>
+          <div class="title-more-info-info">
+            <div class="title-more-info-label">
+              INFO
+            </div>
+            <div class="title-more-info-content">
+              <div class="more-info-row">
+                <div>CLASS</div>
+                <div class="more-info-row-value">{{className}}</div>
+              </div>
+              <div class="more-info-row">
+                <div>SESSION</div>
+                <div class="more-info-row-value">{{session}}</div>
+              </div>
+              <div class="more-info-row">
+                <div>HOUSE</div>
+                <div class="more-info-row-value">{{house}}</div>
+              </div>
+            </div>
+          </div>
+          <span></span>
+          <div class="title-more-info-attendance">
+            <div class="title-more-info-label">
+              ATTENDANCE
+            </div>
+            <div class="title-more-info-content">
+              <div class="more-attendance-row">
+                <div>No. of times School Opened</div>
+                <div class="more-attendance-row-value">{{timesSchoolOpened}}</div>
+              </div>
+              <div class="more-attendance-row">
+                <div>No. of times Present</div>
+                <div class="more-attendance-row-value">{{timesPresent}}</div>
+              </div>
+              <div class="more-attendance-row">
+                <div>No. of times Absent</div>
+                <div class="more-attendance-row-value">2</div>
+              </div>
+            </div>
+          </div>
+          <span></span>
+          <div class="title-more-info-key">
+            <div class="title-more-info-label">
+              KEY TO RATINGS
+            </div>
+            <div class="title-more-info-content">
+              <p>
+                5. Maintain an excellent degree of observable traits
+              </p>
+              <p>
+                4. Maintain high level of observable traits
+              </p>
+              <p>
+                3. Acceptable level of observable traits
+              </p>
+              <p>
+                2. Shows minimal regards for observable traits
+              </p>
+              <p>
+                1. Has no regard for the observable traits
+              </p>
+            </div>
+          </div>
+          <span></span>
+        </div>
+        <div class="title-student-info"><span></span>
+          <div class="title-student-info-name">
+            <div class="label-name round-left">
+              NAME
+            </div>
+            <div class="label-value label-bottom-border">
+              {{lastName}} {{firstName}} {{otherName}}
+            </div>
+          </div><span></span>
+          <div class="title-student-info-reg">
+            <div class="label-name round-left">
+              ADMISSION NO.
+            </div>
+            <div class="label-value label-bottom-border">
+              {{admissionNumber}}
+            </div>
+          </div><span></span>
+          <div class="title-student-info-dob">
+            <div class="label-name round-left">
+              DOB
+            </div>
+            <div class="label-value label-bottom-border">
+              {{dateOfBirth}}
+            </div>
+          </div><span></span>
+          <div class="title-student-info-sex">
+            <div class="label-name round-left">
+              SEX
+            </div>
+            <div class="label-value label-bottom-border">
+              {{gender}}
+            </div>
+          </div><span></span>
+        </div>
+        <span></span>
+      </section>
+
+      <section id="section-body">
+        <span></span>
+        <div class="body-left">
+          <div class="result-header">
+            <div class="subject-row subject-gridlines text-vertical enforce-radius-header">
+              <div class="result-header-label">SUBJECTS</div>
+              <div><span><span>Cont. Assess Score</span></span></div>
+              <div><span><span>Examinaton Score</span></span></div>
+              <div><span><span>Weighed Average</span></span></div>
+              <div><span><span>1st Term score</span></span></div>
+              <div><span><span>2nd Term Score</span></span></div>
+              <div><span><span>Cumulative Total</span></span></div>
+              <div><span><span>Final %</span></span></div>
+              <div><span><span>Position</span></span></div>
+              <div>Subject Teacher's Remarks</div>
+            </div>
+          </div>
+          <span></span>
+          <div class="result-body">
+            {{#results}}
+            <div class="subject-row subject-gridlines">
+              <b class="subject-row-label">{{subject}}</b>
+              <span>{{ca}}</span>
+              <span>{{exam}}</span>
+              <span>{{presentTerm}}</span>
+              <span>{{firstTerm}}</span>
+              <span>{{secondTerm}}</span>
+              <span>{{cummulative}}</span>
+              <span>{{average}}</span>
+              <span>{{position}}</span>
+              <span>{{remark}}</span>
+            </div>
+            {{/results}}
+          </div>
+          <span></span>
+          <div class="result-footer">
+            <div class="subject-row subject-gridlines enforce-radius-footer">
+              <span class="result-footer-label">Total</span>
+              <span>{{totals.ca}}</span>
+              <span>{{totals.exam}}</span>
+              <span>{{totals.presentTerm}}</span>
+              <span>{{totals.firstTerm}}</span>
+              <span>{{totals.secondTerm}}</span>
+              <span>{{totals.cummulative}}</span>
+              <span>{{totals.average}}</span>
+              <span></span>
+              <span>{{totals.remark}}</span>
+            </div>
+          </div>
+        </div>
+        <span></span>
+        <div class="body-right">
+          <div class="body-right-label">
+            RATINGS
+          </div>
+          <div>
+            <h5 class="skill-caption">{{ratingsLabels.skills}}</h5>
+            {{#ratingsSkills}}
+            <div class="skill-row">
+              <p class="skill-label">{{name}}</p>
+              <p class="skill-value">{{value}}</p>
+            </div>
+            {{/ratingsSkills}}
+          </div>
+          <div>
+            <h5 class="skill-caption">{{ratingsLabels.sports}}</h5>
+            {{#ratingsSports}}
+            <div class="skill-row">
+              <p class="skill-label">{{name}}</p>
+              <p class="skill-value">{{value}}</p>
+            </div>
+            {{/ratingsSports}}
+          </div>
+          <div>
+            <h5 class="skill-caption">{{ratingsLabels.curricular}}</h5>
+            {{#ratingCurricular}}
+            <div class="skill-row">
+              <p class="skill-label">{{name}}</p>
+              <p class="skill-value">{{value}}</p>
+            </div>
+            {{/ratingCurricular}}
+          </div>
+          <div>
+            <h5 class="skill-caption">{{ratingsLabels.behaviour}}</h5>
+            {{#ratingBehaviour}}
+            <div class="skill-row">
+              <p class="skill-label">{{name}}</p>
+              <p class="skill-value">{{value}}</p>
+            </div>
+            {{/ratingBehaviour}}
+          </div>
+        </div>
+        <span></span>
+      </section>
+
+      <section id="section-footer">
+        <span></span>
+        <div class="footer-comment">
+          <span></span>          
+          <div class="comment-label">
+            Class Teacher's Comment
+          </div>
+          <div class="comment-value">
+            {{teacherComment}}
+          </div>
+          <span></span>
+        </div>
+        <span></span>
+        <div class="footer-comment">
+          <span></span>          
+          <div class="comment-label">
+            Principal's Comment
+          </div>
+          <div class="comment-value">
+            {{principalComment}}
+          </div>
+          <span></span>
+        </div>
+        <span></span>
+        <div class="footer-next">
+          <span></span>
+          <div>Next Term Begins on</div>
+          <div>{{nextTermBegins}}</div>
+          <div class="signature">
+            <p class="signature-label">Signature and School Stamp</p>
+          </div>
+          <span></span>
+        </div>
+        <span></span>
+      </section>
+    </section>
+  </body>
+</html>

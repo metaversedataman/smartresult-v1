@@ -1,0 +1,26 @@
+0 silly argv {
+0 silly argv   _: [ 'run' ],
+0 silly argv   parallel: true,
+0 silly argv   lernaVersion: '3.22.1',
+0 silly argv   '$0': 'node_modules\\lerna\\cli.js',
+0 silly argv   script: 'start'
+0 silly argv }
+1 notice cli v3.22.1
+2 verbose rootPath C:\Master_Redwood\smartschool
+3 info Executing command in 3 packages: "yarn run start"
+4 silly npmRunScript.stream [ 'start', [], 'smartapi' ]
+5 silly getExecOpts C:\Master_Redwood\smartschool\smartapi undefined
+6 silly npmRunScript.stream [ 'start', [], 'smartresult' ]
+7 silly getExecOpts C:\Master_Redwood\smartschool\smartresult undefined
+8 silly npmRunScript.stream [ 'start', [], 'smartschool' ]
+9 silly getExecOpts C:\Master_Redwood\smartschool\smartschool undefined
+10 error MaxBufferError: stdout maxBuffer exceeded
+10 error     at PassThrough.<anonymous> (C:\Master_Redwood\smartschool\node_modules\get-stream\index.js:41:19)
+10 error     at PassThrough.emit (node:events:402:35)
+10 error     at addChunk (node:internal/streams/readable:315:12)
+10 error     at readableAddChunk (node:internal/streams/readable:285:11)
+10 error     at PassThrough.Readable.push (node:internal/streams/readable:228:10)
+10 error     at node:internal/streams/transform:192:12
+10 error     at PassThrough._transform (node:internal/streams/passthrough:46:3)
+10 error     at PassThrough.Transform._write (node:internal/streams/transform:184:23)
+10 error     at writeOrBuffer (node:internal/streams/writable:389:12)
