@@ -44,7 +44,7 @@ Node backend runs at port 8881.
 
 2. Fill them with the desired data
 
-3. Zip them and one file
+3. Zip them as one file
 
 4. Upload the file to generate the results
 
@@ -97,5 +97,5 @@ Node backend runs at port 8881.
 
 **Duration:** 3 months.
 
-**Updates:** The next update will included database integration, and real-time result computation.
+**Updates:** The next update will include database integration, and real-time result computation.
 
